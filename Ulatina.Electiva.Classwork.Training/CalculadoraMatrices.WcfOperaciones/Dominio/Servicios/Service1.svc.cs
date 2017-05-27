@@ -12,6 +12,13 @@ namespace CalculadoraMatrices.WcfOperaciones
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public double[,] ObtenerMatrizTranspuesta(double[,] matriz)
+        {
+            double[,] elresultado;
+            Dominio.Acciones.Transponer laAccion = new Dominio.Acciones.Transponer();
+            elresultado = laAccion.Transpuesta(matriz);
+            return elresultado;
+        }
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

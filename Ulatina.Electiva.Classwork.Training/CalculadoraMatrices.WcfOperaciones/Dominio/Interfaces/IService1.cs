@@ -12,6 +12,8 @@ namespace CalculadoraMatrices.WcfOperaciones
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        double[,] ObtenerMatrizTranspuesta(double[,] matriz);
 
         [OperationContract]
         string GetData(int value);
